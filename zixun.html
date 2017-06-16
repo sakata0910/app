@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/swiper.min.js" ></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/zixun.css" />
+		<script type="text/javascript" src="js/angular-1.4.6.min.js" ></script>
+	</head>
+	<body ng-controller='con'>
+		<header>
+			<a href="index.html"><img src='img/ios_logo.png'></a>
+			<a href="second/search.html"><input type='text' class="input" placeholder="搜索游戏"></a>
+			<a href="second/my.html"><p></p></a>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">苹果游戏</a></li>
+				<li class="on"><a href="zixun.html">资讯</a></li>
+				<li><a href="sort.html">分类</a></li>
+				<li ><a href="List.html">榜单</a></li>
+				<li><a href="event.html">活动</a></li>
+		</nav>
+		<div class="view">
+			<ul>
+				<li ng-repeat='li in list'>
+					<h2><a href="{{li.href}}">{{li.h2}}</a></h2>
+					<p>{{li.p}}</p>
+					<p>{{li.day}}</p>
+					
+				</li>
+			</ul>
+		</div>
+		<footer>
+			<p>粤ICP备09210879号-20 粤网文[2013]0245-095号</p>
+			<p>公司名称：广州爱九游信息技术有限公司</p>
+			<p>公司地址：广州市天河区黄埔大道西平云路163号广电平云广场B塔</p>
+			<p>公司电话：020-66824881</p>
+		</footer>
+	</body>
+	<script>
+		var app=angular.module('myapp',[]);
+		app.controller("con",function($scope,$http){
+			$http({
+			method:"GET",
+			url:"datas/twodata.json",
+		}).then(function(res){
+			$scope.list=res.data.list
+		
+		})
+		})
+	</script>
+</html>

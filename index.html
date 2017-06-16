@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/yi.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/swiper.min.js" ></script>
+		<script type="text/javascript" src="js/angular-1.4.6.min.js" ></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style>
+
+			.swiper-container{
+				width: 100%;
+				height: 120px;
+			}
+			.swiper-wrapper{
+				width: 250%;
+				height: 180px;
+			}
+			.swiper-slide{
+				width: 120%;
+				height: 100%;
+				display: flex;
+				/*flex-direction: column;*/
+			}
+			.two{
+				width: 250%;
+				height: 180px;
+			}
+		</style>
+	<body ng-controller='con'>
+		<header>
+			<a href="index.html"><img src='img/ios_logo.png'></a>
+			<a href="second/search.html"><input type='text' class="input" placeholder="搜索游戏"></a>
+			<a href="second/my.html"><p></p></a>
+		</header>
+		<nav>
+			<ul>
+				<li class="on"><a href="home.html">苹果游戏</a></li>
+				<li><a href="zixun.html">资讯</a></li>
+				<li><a href="sort.html">分类</a></li>
+				<li><a href="List.html">榜单</a></li>
+				<li><a href="event.html">活动</a></li>
+			</ul>
+		</nav>
+		<div class="view">
+		<div class="slide" id='slide'>
+			<ul class="slideinner" id='slideinner'>
+				<li ng-repeat='s in slide'><a href="{{s.href}}"><img ng-src="{{s.img}}" ></a></li>
+			</ul>
+      	<!--<p class="dd">
+      		<span class="active"></span>
+      		<span></span>
+      	</p>-->
+   	 	</div>
+   	 	<div class="classify">
+   	 		<ul>
+   	 			<li ng-repeat='c in classify'><a href="{{c.href}}"><img ng-src='{{c.img}}'></a></li>
+   	 		</ul>
+   	 	</div>
+   	 	<div class="tuijian">
+   	 		<div class="title">
+   	 		<span>ios游戏推荐</span>
+   	 		<span><a href="sort.html">更多</a></span>
+   	 		</div>
+   	 		<div class="swiper-container">
+   	 			<div class="swiper-wrapper">
+   	 				<div class="swiper-slide">
+   	 				<div ng-repeat='sw in swiper'><a href="{{sw.href}}"><img ng-src='{{sw.img}}'><p>{{sw.p}}</p></a></div>
+   	 				<!--<div><a href="second/games/g1.html"><img src='img/14394280_.jpg'><p>崩坏3</p></a></div>
+   	 				<div><a href="second/games/g3.html"><img src='img/13807566_.jpg'><p>梦幻诛仙手游</p></a></div>
+   	 				<div><a href="second/games/g4.html"><img src='img/13794964_.png'><p>阴阳师</p></a></div>
+   	 				<div><a href="second/games/g8.html"><img src='img/14375566_.jpg'><p>唱舞团</p></a></div>
+   	 				<div><a href="second/games/g8.html"><img src='img/13249281_.jpg'><p>王者荣耀</p></a></div>-->
+   	 			</div>
+   	 		</div>
+   	 	</div>
+   	 	<div class="hot">
+   	 		<div class="title">
+   	 		<span>热门资讯</span>
+   	 		<span><a href="zixun.html">更多</a></span>
+   	 		</div>
+   	 		<div class="list">
+   	 			<ul>
+   	 				<li ng-repeat='li in list'><a href="{{li.href}}">{{li.li}}</a></li>
+   	 				<!--<li><a href="second/list/li2.html">问道手游毒伤技能效果怎么强化  更强的...</a></li>
+   	 				<li><a href="second/list/li3.html">杀生院祈荒-Sakuyaka</a></li>
+   	 				<li><a href="second/list/li1.html">问道手游法宝灵气补充心得  灵气补充技...</a></li>
+   	 				<li><a href="second/list/li2.html">问道手游闪烁字体使用心得 卞梁天边闪...</a></li>-->
+   	 			</ul>
+   	 		</div>
+   	 	</div>
+   	 	<div class="subject">
+   	 		<a href="second/list/li2.html"><img class="hea" src='img/14578622.jpg'></a>
+   	 		<ul>
+   	 			<li><a href="second/zhuanti.html"><img src='img/14084794.png'></a></li>
+   	 			<li><a href="second/zhuanti.html"><img src='img/14084795.png'></a></li>
+   	 		</ul>
+   	 	</div>
+   	 	<div class="box1">
+   	 			<div class="title">
+   	 		<span>最新ios网游</span>
+   	 		</div>
+   	 		<div class="swiper-container">
+   	 			<div class="swiper-wrapper two">
+   	 				<div class="swiper-slide">
+   	 				<div ng-repeat='gm1 in games1'><a href="{{gm1.href}}"><img ng-src='{{gm1.img}}'><p>{{gm1.p}}</p></a></div>
+   	 				<!--<div><a href="second/games/g9.html"><img src='img/17180208_.jpg'><p>还珠格格</p></a></div>
+   	 				<div><a href="second/games/g2.html"><img src='img/17179999_.jpg'><p>像素扣篮</p></a></div>
+   	 				<div><a href="second/games/g4.html"><img src='img/17160012_.png'><p>魂斗罗：归来</p></a></div>
+   	 				<div><a href="second/games/g11.html"><img src='img/17086499_.jpg'><p>SUP 多人赛车</p></a></div>
+   	 				<div><a href="second/games/g3.html"><img src='img/16253843_.jpg'><p>奇度不懈的追求</p></a></div>
+   	 				<div><a href="second/games/g7.html"><img src='img/17123805_.jpg'><p>史前埃及</p></a></div>
+   	 				<div><a href="second/games/g12.html"><img src='img/17033235_.jpg'><p>上墙</p></a></div>-->
+   	 				</div>
+   	 			</div>
+   	 		</div>
+   	 		</div>
+   	 		<div class="box1">
+   	 				<div class="title">
+   	 		<span>最新ios单机</span>
+   	 		</div>
+   	 			<div class="swiper-container">
+   	 			<div class="swiper-wrapper two">
+   	 				<div class="swiper-slide">
+   	 				<div ng-repeat='gm2 in games2'><a href="{{gm2.href}}"><img ng-src='{{gm2.img}}'><p>{{gm2.p}}</p></a></div>
+   	 				<!--<div><a href="second/games/g6.html"><img src='img/17180697_.jpg'><p>MinesweepeOL</p></a></div>
+   	 				<div><a href="second/games/g7.html"><img src='img/17180637_.jpg'><p>Haunted House...</p></a></div>
+   	 				<div><a href="second/games/g3.html"><img src='img/17180576_.jpg'><p>Heavy Weapon</p></a></div>
+   	 				<div><a href="second/games/g5.html"><img src='img/17180554_.jpg'><p>跑酷传奇</p></a></div>
+   	 				<div><a href="second/games/g4.html"><img src='img/17180538_.jpg'><p>超级汉堡时代</p></a></div>
+   	 				<div><a href="second/games/g10.html"><img src='img/17180514_.jpg'><p>开心超人超时空飞车</p></a></div>
+   	 				<div><a href="second/games/g2.html"><img src='img/17180492_.jpg'><p>火线指令</p></a></div>-->
+   	 				</div>
+   	 			</div>
+   	 		</div>
+   	 		</div>
+   	 		<div class="link">
+   	 			<h4>友情链接</h4>
+   	 			<div class="cont">
+   	 			<p>九游论坛|6399游戏网|好玩的手游|</p>
+   	 			<p>175114游戏|手机游戏下载|找游戏手游网|</p>
+   	 			<p>好玩的手机游戏|手机网游下载|花火网|</p>
+   	 			<p>西西下载|侠游戏网|安玩游戏下载 </p>
+   	 			</div>
+   	 			<p class="angle"></p>
+   	 		</div>
+   	 		
+</div></div>
+
+<footer>
+	<p>下载客户端（<span>领福利看攻略</span>）|九游安卓频道</p>
+	<p>粤ICP备09210879号-20 粤网文[2013]0245-095号</p>
+	
+</footer>
+	</body>
+	<script>
+	var app=angular.module('myapp',[]);
+	app.controller('con',function($http,$timeout,$scope){
+		$timeout(function(){
+			;(function($){
+		
+		
+					var index=0;
+					var lunn=$('#slide');
+					var len=$('#slideinner>li').length;
+					var ull=$('#slideinner');
+					var spp=$('.dd>span');
+				    var timer=setInterval(function(){
+				    	lunz();
+				    },2000)
+				    lunn.swipeLeft(function(){
+				    	clearInterval(timer);
+				    	lunz();
+				    	setTimeout(function(){
+				    		clearInterval(timer)
+				    		timer=setInterval(function(){
+				    			lunz();
+				    			lun(index);
+				    		},2000)
+				    	},3000)
+				    }).swipeRight(function(){
+				    	clearInterval(timer);
+				    	if(index<=0){
+				    		index=l=en-1;
+				    		var mar=index*-100+'%';
+				    		ull.css({'margin-left':mar});
+				    	}
+				    	index--;
+				    	lun(index);
+				    	setTimeout(function(){
+				    		clearInterval(timer)
+				    		timer=setInterval(function(){
+				    			lunz();
+				    			lun(index);
+				    		},2000)
+				    	},3000)
+				    })
+				    function lunz(){
+				    	if(index>=len-1){
+				    		index=0;
+				    		var mar=index*-100+'%';
+				    		ull.css({'margin-left':mar});
+				    	}
+				    	index++;
+				    	lun(index)
+				    }
+				    function lun(index){
+				    	var mar=index*-100+'%';
+				    	ull.animate({'marginLeft':mar},500);
+				    	spp.eq(index).addClass('on').siblings().removeClass('on');
+				    	if(index==len-1){
+				    		spp.eq(0).addClass('on').siblings().removeClass('on')
+				    		}
+				    }
+				    
+				  
+				    
+				})(jQuery)
+},1000)
+		$http({
+			method:"GET",
+			url:"datas/onedata.json",
+		}).then(function(res){
+			$scope.slide=res.data.slide
+			$scope.classify=res.data.classify
+			$scope.swiper=res.data.swiper
+			$scope.list=res.data.list
+			$scope.sub=res.data.sub
+			$scope.games1=res.data.games1
+			$scope.games2=res.data.games2
+		})
+		
+	})
+	var myswiper = new Swiper('.swiper-container',{
+				slidesPerView:0,
+				spaceBetween:0,
+			})
+		 
+		</script>
+</html>

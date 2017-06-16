@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+nav {
+  width: 100%;
+  height: 40px;
+  background: #fff; }
+  nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 40px; }
+    nav ul li {
+      width: 100%;
+      line-height: 40px;
+      text-align: center;
+      border-bottom: 1px solid #EBEBEB; }
+      nav ul li a {
+        font-size: 13px;
+        text-decoration: none;
+        color: #575757; }
+    nav ul .active {
+      border-bottom: 2px solid #FF8800; }
+      nav ul .active a {
+        color: #FF8800; }
+
+.view {
+  width: 100%;
+  padding-left: 10px;
+  background: #fff; }
+  .view a {
+    text-decoration: none;
+    color: #333333; }
+  .view ul {
+    width: 95%;
+    list-style: none;
+    background: #fff; }
+    .view ul li {
+      padding: 15px 0 27px;
+      display: block;
+      border-bottom: 1px solid #ebebeb; }
+      .view ul li h2 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-weight: 900; }
+      .view ul li p {
+        margin-bottom: 10px;
+        line-height: 20px;
+        font-size: 13px; }
+        .view ul li p:last-child {
+          color: #A5999F;
+          font-size: 11px; }
+
+/*# sourceMappingURL=data.css.map */

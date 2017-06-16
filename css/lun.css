@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+body {
+  line-height: 1;
+  color: #333; }
+
+header {
+  background: #fff;
+  width: 100%;
+  height: 55px;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around; }
+  header img {
+    width: 15%;
+    height: 70%;
+    margin-top: -5px; }
+  header input {
+    width: 50%;
+    height: 30px;
+    border-radius: 3px;
+    background: url(../img/i_ico.png) no-repeat 5px -110px;
+    background-size: 70px auto;
+    border: 1px solid #CCCCCC;
+    padding-left: 30px; }
+  header p {
+    width: 40px;
+    height: 40px;
+    background: url(../img/i_ico.png) no-repeat;
+    background-position: -32px -2px;
+    background-size: 70px auto; }
+  header a {
+    text-decoration: none;
+    color: #FE8800; }
+  header span {
+    color: #999999; }
+
+.url {
+  width: 100%;
+  height: 30px;
+  background: #fff;
+  border-bottom: 1px solid #DDDDDD;
+  padding-left: 10px; }
+  .url a {
+    color: #FF8800;
+    text-decoration: none; }
+  .url span {
+    color: #999999; }
+
+.essay {
+  width: 90%;
+  padding-left: 10px;
+  padding-top: 20px;
+  background: #fff; }
+  .essay h2 {
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .essay span {
+    color: #999C9F; }
+  .essay p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px; }
+  .essay img {
+    width: 100%; }
+  .essay .ga {
+    width: 100%;
+    position: relative; }
+    .essay .ga .line {
+      border-top: #C9C9C9 2px solid; }
+    .essay .ga .img {
+      display: inline-block;
+      padding-left: 10px;
+      padding-top: 10px;
+      border-left: #C9C9C9 2px solid; }
+      .essay .ga .img img {
+        vertical-align: top; }
+    .essay .ga span {
+      color: #176DE5;
+      font-weight: bold; }
+    .essay .ga strong {
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      margin-left: 15px;
+      margin-top: 10px; }
+    .essay .ga a {
+      margin-left: 12px;
+      position: absolute;
+      top: 50px;
+      left: 110px;
+      text-decoration: none;
+      color: #176DE5;
+      font-size: 16px;
+      font-weight: bold; }
+    .essay .ga .review {
+      width: 100%; }
+      .essay .ga .review img {
+        width: 100%; }
+
+.final {
+  width: 100%;
+  text-align: center; }
+  .final p .z1 {
+    color: #176DE5;
+    font-weight: bold; }
+  .final p .z2 {
+    color: #FF0000; }
+  .final p .z3 {
+    color: #FF9A00;
+    font-weight: bold; }
+
+footer {
+  padding-top: 15px;
+  height: 50px;
+  padding-left: 10px;
+  background: #F4F4F4;
+  text-align: center; }
+  footer p {
+    width: 95%;
+    font-size: 14px; }
+
+/*# sourceMappingURL=lun.css.map */

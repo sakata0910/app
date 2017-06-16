@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/zepto.min.js" ></script>
+		<script type="text/javascript" src="js/swiper.min.js" ></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/List.css" />
+		<script type="text/javascript" src="js/angular-1.4.6.min.js" ></script>
+	</head>
+	<body ng-controller='con'>
+		<header>
+			<a href="index.html"><img src='img/ios_logo.png'></a>
+			<a href="second/search.html"><input type='text' class="input" placeholder="搜索游戏"></a>
+			<a href="second/my.html"><p></p></a>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">苹果游戏</a></li>
+				<li><a href="zixun.html">资讯</a></li>
+				<li><a href="sort.html">分类</a></li>
+				<li class="on"><a href="List.html">榜单</a></li>
+				<li><a href="event.html">活动</a></li>
+			</ul>
+		</nav>
+		<div class="view">
+		<div class="nav">
+			<button ><a href="List.html">最热苹果游戏排行榜</a></button>
+			<button class="inn"><a href="list2.html">最新苹果游戏排行榜</a></button>
+		</div>
+		<div class="listview">
+			<ul>
+				<li>
+					<a href="second/listin/in1.html">
+					<span id="one">1</span>
+					<img src='img/13249281_.jpg'>
+					<p>王者荣耀</p>
+					<button>下载</button></a>
+				</li>
+				<li><a href="second/listin/in2.html">
+					<span id="two">2</span>
+					<img src='img/11021106_.png'>
+					<p>部落冲突</p>
+					<button>下载</button></a>
+				</li>
+				<li><a href="second/listin/in3.html">
+					<span id="three">3</span>
+					<img src='img/12166143_.png'>
+					<p>皇室战争</p>
+					<button>下载</button></a>
+				</li>
+				<li ng-repeat="li in list1"><a href="{{li.href}}">
+					<span>{{li.span}}</span>
+					<img ng-src='{{li.img}}'>
+					<p>{{li.p}}</p>
+					<button>下载</button></a>
+				</li>
+				
+			
+			</ul>
+		</div>
+		</div>
+		<footer>
+			<p>粤ICP备09210879号-20 粤网文[2013]0245-095号</p>
+		</footer>
+	</body>
+		<script>
+		var app=angular.module('myapp',[]);
+		app.controller("con",function($scope,$http){
+			$http({
+			method:"GET",
+			url:"datas/treedata.json",
+		}).then(function(res){
+			$scope.list1=res.data.listview1
+		
+		})
+		})
+	</script>
+</html>

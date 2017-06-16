@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/xianmain.css" />
+	</head>
+	<style>
+		.swiper-container{
+				width: 100%;
+				height: 300px;
+			}
+			.swiper-wrapper{
+				width: 100%;
+				height: 180px;
+			}
+			.swiper-slide{
+				width: 100%;
+				height: 100%;
+				/*display: flex;*/
+				/*flex-direction: column;*/
+			}
+			a{
+				text-decoration: none;
+				color: #666666;
+			}
+	</style>
+	<body>
+		<header>
+			<a href="../index.html"><img src='xm/back.png'></a>
+			<p>单机游戏</p>
+			<a href="#"><img src='xm/search-icon.png'></a>
+		</header>
+		<div class="view">
+			<div class="swiper-container" id='swiper-container3' style="height:150px;">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide">
+			<img src='xm/15741817_.jpg'></div>
+		<div class="swiper-slide">
+			<img src='xm/15902440_.jpg'></div>
+		<div class="swiper-slide">
+			<img src='xm/16094286_.jpg'></div>
+	</div>
+	<div class="swiper-pagination"></div>
+</div
+		</div>
+		</div>
+		<div class="btns">
+			<a href="../sort.html" style="text-decoration: none;">
+			<button>休闲</button>
+			<button>动作</button>
+			<button>竞速</button>
+			<button>益智</button>
+			<button>角色</button>
+			<button>射击</button>
+			<button>冒险</button>
+			<button>策略</button>
+			<button>格斗</button>
+			<button>棋牌</button>
+			<button>体育</button>
+			<button>模拟</button>
+			</a>
+		</div>
+		<div class="tiao"></div>
+		<div class="tui">
+			<div class="title">
+   	 		<span>ios游戏推荐</span>
+   	 		<span>更多</span>
+   	 		</div>
+   	 		<div class="listview">
+			<ul>
+				<li>
+					
+					<img src='../img/13249281_.jpg'>
+					<p><a href="games/g1.html">王者荣耀</a></p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/11021106_.png'>
+					<p><a href="games/g2.html">部落冲突</a></p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/12166143_.png'>
+					<p><a href="games/g3.html">皇室战争</a></p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/14375566_.jpg'>
+					<p><a href="games/g4.html">唱舞团</a></p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/15250199_.png'>
+					<p><a href="games/g5.html">太极熊猫</a></p>
+					<button>去玩</button>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div class="tiao"></div>
+		<div class="tui">
+			<div class="title">
+   	 		<span>最新单机游戏</span>
+   	 		<span>更多</span>
+   	 		</div>
+   	 		<div class="listview">
+			<ul>
+				<li>
+					<img src='../img/13249281_.jpg'>
+					<p>你行你上</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/11021106_.png'>
+					<p>部落冲突</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/12166143_.png'>
+					<p>皇室战争</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/14375566_.jpg'>
+					<p>跑酷传奇</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/15250199_.png'>
+					<p>超级汉堡</p>
+					<button>去玩</button>
+				</li>
+					<li>
+					<img src='../img/13249281_.jpg'>
+					<p>你行你上</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/11021106_.png'>
+					<p>部落冲突</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/12166143_.png'>
+					<p>皇室战争</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/14375566_.jpg'>
+					<p>跑酷传奇</p>
+					<button>去玩</button>
+				</li>
+				<li>
+					<img src='../img/15250199_.png'>
+					<p>超级汉堡</p>
+					<button>去玩</button>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<footer>
+			<p>粤ICP备09210879号-20 粤网文[2013]0245-095号</p>
+		</footer>
+		
+		
+		
+	</body>
+	<script>
+		var mySwiper3 = new Swiper('#swiper-container3',{
+		effect : 'coverflow',
+		slidesPerView: 1,
+		centeredSlides: true,
+		pagination : '.swiper-pagination',
+		autoplay:2000
+		})
+	</script>
+</html>

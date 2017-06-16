@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="../../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../../js/swiper.min.js" ></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/event.css" />
+	</head>
+	<body>
+		<header>
+			<a href="../../index.html"></a>
+			<p>苹果游戏讨论区</p>
+			<a href=""></a>
+			<a href=""></a>
+		</header>
+		<div class="operate">
+			<button>+发帖</button>
+			<ul>
+				<li>收藏</li>
+				<li>分类</li>
+				<li>更多</li>
+			</ul>
+		</div>
+		<div class="xuan">
+			<button><a href="../../event.html">全部</a></button>
+			<button class="act"><a href="jing.html">精华</a></button>
+			<button><a href="new.html">新帖</a></button>
+		</div>
+		<div class="invitation">
+			<p>本版块或指定的范围内尚无主题</p>
+		</div>
+			
+		<div class="roll">
+			<ul class="rollin">
+				<li><a href=""><i class="horn"></i> <span>有什么好游戏推荐？这里有！！</span></a></li>
+				<li><a href=""><i class="horn"></i> <span>手游高手尽在九游！欢迎加入【九游高手榜】</span></a></li>
+				<li><a href=""><i class="horn"></i> <span>【活动】征集游戏内容奖励大量充值卡</span></a></li>
+				<li><a href=""><i class="horn"></i> <span>分享内容有奖励：原创写手火热招募中</span></a></li>
+				<li><a href=""><i class="horn"></i> <span>游戏福利游戏勋章：论坛版主火热招募中！</span></a></li>
+				<li><a href=""><i class="horn"></i> <span>对面的女孩看过来！女生认证送永久勋章</span></a></li>
+			</ul>
+		</div>
+		<div class="feny">
+			<div class="fabu">
+				<i class="pen"></i>
+				<p>写攻略，提问题，与众多玩家一起交流吧！</p>
+			</div>
+		</div>
+		<div class="tiao"></div>
+		<div class="down">
+			<div class="txt">
+				<img src='../../img/16549727.png'>
+				<p>下载九游app<span>(领礼包看攻略)</span></p>
+			</div>
+			<button></button>
+		</div>
+		<div class="tiao"></div>
+		<div class="flan">
+		<ul>
+			<li>九游</li>
+			<li>论坛</li>
+			<li>礼包</li>
+			<li>公会</li>
+			<li>我的</li>
+		</ul>
+		</div>
+		<footer>
+			<p>登录可参与活动，领取礼包~ <a href="">登录</a>|<a href="">注册</a></p>
+			<p>手机版|九游APP|玩家客服</p>
+			<p>粤ICP备09210879号-5</p>
+		</footer>
+	</body>
+	<script>
+		(function($){
+					var index=1;
+					var lunn=$('.roll');
+					var len=$('.rollin li').length;
+					var ull=$('.rollin');
+				    var timer=setInterval(function(){
+				    	lunz();
+				    },2000)
+				     function lunz(){
+				    	if(index>=len-1){
+				    		index=0;
+				    		var mar="-"+40*index+'px';
+				    		ull.css('margin-top',mar);
+				    	}
+				    	index++;
+				    	lun(index)
+				    }
+				   
+				    function lun(index){
+				    	var mar="-"+40*index+'px';
+				    	ull.animate({'margin-top':mar},500);
+				    }
+				     $('.xuan').on("click","a",function(){
+				    	$(this).addClass("act").siblings().removeClass("act")
+				    })
+				})(Zepto)
+	</script>
+</html>
